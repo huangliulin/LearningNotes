@@ -82,5 +82,14 @@ eventBus.unregister(this);
  }
 ```
 
+-----------
 
+上面介绍的是 eventbus 2.x 的使用方法，在 eventbus 3.0 中，订阅者不再需要使用 onEventxxx() 这样的方法命名，引入了注解的方式，如下所示
+
+```
+@subscribe
+public void dosomeThing(TestEvent event)
+```
+
+同时，3.0引入了利用 apt 在编译时处理的方法，避免使用反射加快速度
 
